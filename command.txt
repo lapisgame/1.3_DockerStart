@@ -1,0 +1,24 @@
+1)
+docker build -t {image name}:latest .
+/*
+    docker build -t 13_1_image:latest .
+*/
+
+docker run -d -p 5432:5432 --name {name of container} {image name}:latest
+
+/*
+    docker run -d -p 5432:5432 --name 13_1_container 13_1_image:latest
+*/
+
+
+
+2)
+docker exec -it {name of container} psql -d {name of database} -U {username}
+
+/*
+    docker exec -it 13_1_container psql -d database -U username
+*/
+
+
+
+3)
